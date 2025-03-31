@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Developer Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+    <div class="container">
+        <header class="header">
+            <img src="./photo.jpg" alt="Photo" class="profile-img">
+            <section class="header-content">
+                <h1>Виталий Закатов</h1>
+                <p class="position">React developer middle</p>
+                <div class="contact-info">
+                    <a href="tel:+79000585999" class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        +7 900 058 59 99
+                    </a>
+                    <a href="mailto:ivan@example.com" class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        Answer-0885@mail.ru
+                    </a>
+                    <a href="https://github.com/username" class="contact-item">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </a>
+                </div>
+            </section>
+        </header>
+            <!-- Обо мне -->
+            <section class="section" id="about">
+                <h2>Обо мне</h2>
+                <div class="about-content">
+                    <div class="about-icon">
+                        <i class="fas fa-user-astronaut"></i>
+                    </div>
+                    <div class="about-text">
+                        <p class="info-item">
+                            Фронтенд-разработчик с 3-летним опытом создания современных веб-приложений на JavaScript и React. 
+                            В своей работе для меня важно разобраться в деталях, чтобы получить целостную картину.
+                            Не стесняюсь задавать вопросы, даже, если они могут показаться "глупыми".
+                             Бывает так, что для целостного и основательного понимания вопроса или темы
+                             не хватает ответа на какой-нибудь "глупый" вопрос.
+                        </p>
+                        <div class="personal-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Кемерово, Кемеровская область - Кузбасс, Россия
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-certificate"></i>
+                                Сертифицированный React Developer
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="skills">
+                <h2>Навыки</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fab fa-react"></i>
+                        React/Redux
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-js"></i>
+                        JavaScript/TypeScript
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-code"></i>
+                        HTML5/CSS3
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-figma"></i>
+                        Figma/Tailwind
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-rocket"></i>
+                        Webpack
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-server"></i>
+                        Git/GitHub
+                    </div>
+                </div>
+            </section>
+
+        <section class="section" id="experience">
+            <h2>Опыт работы</h2>
+            <div class="experience-item info-item">
+                <h3>Middle Frontend Developer (React)
+                  Январь 2024 — ноябрь 2024  
+                </h3>
+                <p>"FinTrack" (финтех, мобильный банкинг и аналитика) 
+                    <br>Стек: React, Redux, TypeScript, Tailwind, Webpack, Git/GitHub</p>
+                <ul class="experience-item-list">
+                    <li>- Архитектура и разработка модуля финансовых транзакций с real-time обновлениями (WebSocket + Redux).</li>
+                    <li>- Оптимизация производительности приложения (сокращение времени загрузки на 40%)</li>
+                    <li>- Внедрение Redux Toolkit и RTK Query</li>
+                    <li><b>Достижения:</b></li>
+                    <li>- Снизил количество ререндеров в ключевых компонентах на 60% благодаря оптимизации Redux-селекторов.:</li>
+                    <li>- Реализовал SSR для SEO-страниц с помощью Next.js, что увеличило органический трафик на 50%.:</li>
+                    <li>- Автоматизировал 80% рутинных задач (сборка, тесты, деплой) через кастомные GitHub Actions.:</li>
+                </ul>
+            
+            </div>
+            <div class="experience-item info-item">
+                <h3>Frontend Developer (React)
+                    Апрель 2022 — Декабрь 2023
+                </h3>
+                <p>Компания: "E-Commerce Pro" (аутсорсинг для интернет-магазинов)
+                    <br>Стек: React, Redux, TypeScript, HTML/CSS, Tailwind, Webpack, Git/GitHub</p>
+                <ul class="experience-item-list">
+                    <li>Разработка SPA для интернет-магазина: корзина, система фильтров, личный кабинет (React + TypeScript).</li>
+                    <li>Интеграция Redux Toolkit для управления состоянием приложения (корзина, авторизация, кэширование данных).</li>
+                    <li>Оптимизация производительности: lazy loading, мемоизация компонентов (React.memo, useCallback).</li>
+                    <li><b>Достижения:</b></li>
+                    <li>- Уменьшил время первого взаимодействия (TTI) на 35% благодаря оптимизации бандла (Webpack + code splitting).</li>
+                    <li>- Реализовал динамическую систему скидок с использованием Redux, что повысило конверсию в покупки на 15%.</li>
+                </ul>
+            </div>
+            <div class="experience-item info-item">
+                <h3>Junior Frontend Developer (React)
+                    Сентябрь 2021 — Март 2022
+                </h3>
+                <p>Компания: "DevCraft Studio" (стартап, разработка CRM-систем)
+                    <br>Стек: React, JavaScript, HTML/CSS, Tailwind, Webpack, Git/GitHub</p>
+                <ul class="experience-item-list">
+                    <li>Разработка компонентов интерфейса для CRM-платформы: таблицы, формы, модальные окна (React + Tailwind)..</li>
+                    <li>Верстка адаптивных макетов из Figma с использованием CSS-модулей и Tailwind для стилизации.</li>
+                    <li>Интеграция простых RESTful API (получение и отображение данных о клиентах).</li>
+                    <li>Настройка Webpack для сборки проекта (оптимизация конфига под development и production).</li>
+                    <li>Участие в рефакторинге кодовой базы: переход с классовых компонентов на функциональные с хуками.</li>
+                    <li>Исправление багов в существующих компонентах (например, некорректное поведение форм).</li>
+                    <li><b>Достижения:</b></li>
+                    <li>- Перевел проект с CSS-in-JS на Tailwind, сократив время стилизации новых компонентов на 40%.</li>
+                    <li>- Ускорил рендер таблиц с большими данными на 25%, внедрив виртуализацию списков (react-window).</li>
+                </ul>
+            </div>
+        </section>
+
+       
+           <!-- Добавленная секция проектов -->
+    <!-- <section class="section" id="projects">
+        <h2>Проекты</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>E-commerce Platform</h3>
+                <p>Полноценная платформа для онлайн-продаж с корзиной и платежной системой</p>
+                <div class="tech-stack">
+                    <span>React</span>
+                    <span>Redux</span>
+                    <span>Node.js</span>
+                </div>
+                <a href="#" class="demo-link">Демо →</a>
+            </div>
+            <!-- Добавьте больше проектов -->
+        <!-- </div>
+    </section> --> 
+    </div>
+</body>
+</html>
