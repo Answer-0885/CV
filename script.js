@@ -21,41 +21,46 @@ if(astronautIcon) {
             observer.observe(section);
         });
 
-        // Плавный скролл
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+        // // Плавный скролл
+        // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        //     anchor.addEventListener('click', function (e) {
+        //         e.preventDefault();
+        //         document.querySelector(this.getAttribute('href')).scrollIntoView({
+        //             behavior: 'smooth'
+        //         });
+        //     });
+        // });
          // Темная тема
          function toggleTheme() {
             document.body.dataset.theme = 
                 document.body.dataset.theme === 'dark' ? 'light' : 'dark';
             localStorage.setItem('theme', document.body.dataset.theme);
         }
+// Карусель аватарок
+const carouselImages = document.querySelectorAll('.profile-img');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+let currentIndex = 0;
 
-        // Анимация диаграмм
-        const skillBars = document.querySelectorAll('.skill-progress');
-        const barObserver = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if(entry.isIntersecting) {
-                    entry.target.style.width = entry.target.dataset.level + '%';
-                }
-            });
-        }, { threshold: 0.5 });
+function showImage(index) {
+    carouselImages.forEach(img => img.classList.remove('active'));
+    carouselImages[index].classList.add('active');
+}
 
-        skillBars.forEach(bar => barObserver.observe(bar));
+prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + carouselImages.length) % carouselImages.length;
+    showImage(currentIndex);
+});
 
-        // Параллакс эффект
-        // document.addEventListener('mousemove', e => {
-        //     const cards = document.querySelectorAll('.project-card');
-        //     cards.forEach(card => {
-        //         const speed = 5;
-        //         const x = (window.innerWidth - e.pageX * speed)/100;
-        //         const y = (window.innerHeight - e.pageY * speed)/100;
-        //         card.style.transform = `translate(${x}px, ${y}px)`;
-        //     });
-        // });
+nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % carouselImages.length;
+    showImage(currentIndex);
+});
+
+// Автопрокрутка каждые 5 секунд (опционально)
+setInterval(() => {
+    currentIndex = (currentIndex + 1) % carouselImages.length;
+    showImage(currentIndex);
+}, 5000);
+// Динамический год в футере
+document.getElementById('currentYear').textContent = new Date().getFullYear();
