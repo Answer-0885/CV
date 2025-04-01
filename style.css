@@ -448,6 +448,6 @@ body.option1 {
         radial-gradient(circle at 10% 20%, rgba(46, 204, 113, 0.1) 0%, transparent 40%),
         radial-gradient(circle at 90% 80%, rgba(39, 174, 96, 0.1) 0%, transparent 40%),
         var(--bg);
-    background-size: 900px 600px;
+    background-size: 60px 60px;
 }
 
